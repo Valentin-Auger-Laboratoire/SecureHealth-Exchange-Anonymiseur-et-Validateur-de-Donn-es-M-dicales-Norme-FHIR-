@@ -1,0 +1,5726 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:pat-001",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-001",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100000"
+     }
+    ],
+    "name": [
+     {
+      "family": "Martin",
+      "given": [
+       "Léa"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 00"
+     },
+     {
+      "system": "email",
+      "value": "patient1@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1985-07-26",
+    "address": [
+     {
+      "line": [
+       "107 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-001-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-001-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-001"
+    },
+    "effectiveDateTime": "2026-03-16T12:15:00+01:00",
+    "valueQuantity": {
+     "value": 37.3,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-001"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-001-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-001-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-001"
+    },
+    "effectiveDateTime": "2026-03-05T19:00:00+01:00",
+    "valueQuantity": {
+     "value": 37.6,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-001"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-001-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-001-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-001"
+    },
+    "effectiveDateTime": "2026-03-18T18:15:00+01:00",
+    "valueQuantity": {
+     "value": 36.9,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-001"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-002",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-002",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100001"
+     }
+    ],
+    "name": [
+     {
+      "family": "Michel",
+      "given": [
+       "Manon"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 01"
+     },
+     {
+      "system": "email",
+      "value": "patient2@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1974-06-14",
+    "address": [
+     {
+      "line": [
+       "41 rue de la Démo"
+      ],
+      "city": "Évry-Courcouronnes",
+      "postalCode": "91000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-002-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-002-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-002"
+    },
+    "effectiveDateTime": "2026-03-18T14:45:00+01:00",
+    "valueQuantity": {
+     "value": 98.2,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-002"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-002-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-002-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-002"
+    },
+    "effectiveDateTime": "2026-03-02T19:00:00+01:00",
+    "valueQuantity": {
+     "value": 36.4,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-002"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-002-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-002-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-002"
+    },
+    "effectiveDateTime": "2026-03-23T19:00:00+01:00",
+    "valueQuantity": {
+     "value": 125.1,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-002"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-003",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-003",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100002"
+     }
+    ],
+    "name": [
+     {
+      "family": "Laurent",
+      "given": [
+       "Louis"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 02"
+     },
+     {
+      "system": "email",
+      "value": "patient3@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1963-10-08",
+    "address": [
+     {
+      "line": [
+       "31 rue de la Démo"
+      ],
+      "city": "Paris",
+      "postalCode": "75013",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-003-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-003-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-003"
+    },
+    "effectiveDateTime": "2026-03-26T15:45:00+01:00",
+    "valueQuantity": {
+     "value": 93.5,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-003"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-003-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-003-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-003"
+    },
+    "effectiveDateTime": "2026-03-17T14:00:00+01:00",
+    "valueQuantity": {
+     "value": 36.9,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-003"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-003-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-003-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-003"
+    },
+    "effectiveDateTime": "2026-03-23T08:30:00+01:00",
+    "valueQuantity": {
+     "value": 38.0,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-003"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-004",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-004",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100003"
+     }
+    ],
+    "name": [
+     {
+      "family": "Faure",
+      "given": [
+       "Manon"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 03"
+     },
+     {
+      "system": "email",
+      "value": "patient4@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1958-08-03",
+    "address": [
+     {
+      "line": [
+       "77 rue de la Démo"
+      ],
+      "city": "Boulogne-Billancourt",
+      "postalCode": "92100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-004-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-004-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-004"
+    },
+    "effectiveDateTime": "2026-03-11T16:15:00+01:00",
+    "valueQuantity": {
+     "value": 96.1,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-004"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-004-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-004-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-004"
+    },
+    "effectiveDateTime": "2026-03-27T09:00:00+01:00",
+    "valueQuantity": {
+     "value": 96.7,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-004"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-004-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-004-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-004"
+    },
+    "effectiveDateTime": "2026-03-16T08:00:00+01:00",
+    "valueQuantity": {
+     "value": 37.7,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-004"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-005",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-005",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100004"
+     }
+    ],
+    "name": [
+     {
+      "family": "Martin",
+      "given": [
+       "Louis"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 04"
+     },
+     {
+      "system": "email",
+      "value": "patient5@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1951-12-17",
+    "address": [
+     {
+      "line": [
+       "36 rue de la Démo"
+      ],
+      "city": "Corbeil-Essonnes",
+      "postalCode": "91100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-005-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-005-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-005"
+    },
+    "effectiveDateTime": "2026-03-28T10:45:00+01:00",
+    "valueQuantity": {
+     "value": 96.5,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-005"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-005-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-005-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-005"
+    },
+    "effectiveDateTime": "2026-03-16T17:30:00+01:00",
+    "valueQuantity": {
+     "value": 77.4,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-005"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-005-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-005-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-005"
+    },
+    "effectiveDateTime": "2026-03-16T16:30:00+01:00",
+    "valueQuantity": {
+     "value": 93.8,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-005"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-006",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-006",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100005"
+     }
+    ],
+    "name": [
+     {
+      "family": "Moreau",
+      "given": [
+       "Louis"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 05"
+     },
+     {
+      "system": "email",
+      "value": "patient6@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1934-06-26",
+    "address": [
+     {
+      "line": [
+       "22 rue de la Démo"
+      ],
+      "city": "Corbeil-Essonnes",
+      "postalCode": "91100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-006-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-006-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-006"
+    },
+    "effectiveDateTime": "2026-03-14T07:00:00+01:00",
+    "valueQuantity": {
+     "value": 37.9,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-006"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-006-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-006-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-006"
+    },
+    "effectiveDateTime": "2026-03-02T16:00:00+01:00",
+    "valueQuantity": {
+     "value": 93.2,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-006"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-006-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-006-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-006"
+    },
+    "effectiveDateTime": "2026-03-20T16:00:00+01:00",
+    "valueQuantity": {
+     "value": 95.3,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-006"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-007",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-007",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100006"
+     }
+    ],
+    "name": [
+     {
+      "family": "Martin",
+      "given": [
+       "Jules"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 06"
+     },
+     {
+      "system": "email",
+      "value": "patient7@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1946-04-06",
+    "address": [
+     {
+      "line": [
+       "92 rue de la Démo"
+      ],
+      "city": "Paris",
+      "postalCode": "75013",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-007-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-007-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-007"
+    },
+    "effectiveDateTime": "2026-03-16T10:00:00+01:00",
+    "valueQuantity": {
+     "value": 97.5,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-007"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-007-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-007-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-007"
+    },
+    "effectiveDateTime": "2026-03-18T13:00:00+01:00",
+    "valueQuantity": {
+     "value": 93.4,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-007"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-007-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-007-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-007"
+    },
+    "effectiveDateTime": "2026-03-08T08:30:00+01:00",
+    "valueQuantity": {
+     "value": 74.0,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-007"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-008",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-008",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100007"
+     }
+    ],
+    "name": [
+     {
+      "family": "Garnier",
+      "given": [
+       "Adam"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 07"
+     },
+     {
+      "system": "email",
+      "value": "patient8@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1939-10-04",
+    "address": [
+     {
+      "line": [
+       "90 rue de la Démo"
+      ],
+      "city": "Corbeil-Essonnes",
+      "postalCode": "91100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-008-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-008-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-008"
+    },
+    "effectiveDateTime": "2026-03-07T11:30:00+01:00",
+    "valueQuantity": {
+     "value": 151.4,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-008"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-008-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-008-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-008"
+    },
+    "effectiveDateTime": "2026-03-27T16:15:00+01:00",
+    "valueQuantity": {
+     "value": 132.8,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-008"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-008-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-008-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-008"
+    },
+    "effectiveDateTime": "2026-03-25T07:15:00+01:00",
+    "valueQuantity": {
+     "value": 98.1,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-008"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-009",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-009",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100008"
+     }
+    ],
+    "name": [
+     {
+      "family": "Moreau",
+      "given": [
+       "Louis"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 08"
+     },
+     {
+      "system": "email",
+      "value": "patient9@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1999-11-06",
+    "address": [
+     {
+      "line": [
+       "2 rue de la Démo"
+      ],
+      "city": "Paris",
+      "postalCode": "75013",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-009-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-009-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-009"
+    },
+    "effectiveDateTime": "2026-03-22T13:30:00+01:00",
+    "valueQuantity": {
+     "value": 128.4,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-009"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-009-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-009-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-009"
+    },
+    "effectiveDateTime": "2026-03-27T17:30:00+01:00",
+    "valueQuantity": {
+     "value": 83.8,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-009"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-009-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-009-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-009"
+    },
+    "effectiveDateTime": "2026-03-15T18:00:00+01:00",
+    "valueQuantity": {
+     "value": 73.4,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-009"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-010",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-010",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100009"
+     }
+    ],
+    "name": [
+     {
+      "family": "Moreau",
+      "given": [
+       "Inès"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 09"
+     },
+     {
+      "system": "email",
+      "value": "patient10@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "2001-08-12",
+    "address": [
+     {
+      "line": [
+       "79 rue de la Démo"
+      ],
+      "city": "Évry-Courcouronnes",
+      "postalCode": "91000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-010-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-010-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-010"
+    },
+    "effectiveDateTime": "2026-03-22T12:15:00+01:00",
+    "valueQuantity": {
+     "value": 37.8,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-010"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-010-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-010-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-010"
+    },
+    "effectiveDateTime": "2026-03-24T13:00:00+01:00",
+    "valueQuantity": {
+     "value": 70.1,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-010"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-010-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-010-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-010"
+    },
+    "effectiveDateTime": "2026-03-23T12:15:00+01:00",
+    "valueQuantity": {
+     "value": 94.4,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-010"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-011",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-011",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100010"
+     }
+    ],
+    "name": [
+     {
+      "family": "Faure",
+      "given": [
+       "Chloé"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 10"
+     },
+     {
+      "system": "email",
+      "value": "patient11@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1980-07-28",
+    "address": [
+     {
+      "line": [
+       "90 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-011-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-011-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-011"
+    },
+    "effectiveDateTime": "2026-03-25T17:00:00+01:00",
+    "valueQuantity": {
+     "value": 84.9,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-011"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-011-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-011-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-011"
+    },
+    "effectiveDateTime": "2026-03-09T18:15:00+01:00",
+    "valueQuantity": {
+     "value": 77.9,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-011"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-011-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-011-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-011"
+    },
+    "effectiveDateTime": "2026-03-18T16:00:00+01:00",
+    "valueQuantity": {
+     "value": 149.5,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-011"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-012",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-012",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100011"
+     }
+    ],
+    "name": [
+     {
+      "family": "Moreau",
+      "given": [
+       "Adam"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 11"
+     },
+     {
+      "system": "email",
+      "value": "patient12@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1973-07-07",
+    "address": [
+     {
+      "line": [
+       "71 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-012-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-012-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-012"
+    },
+    "effectiveDateTime": "2026-03-27T18:15:00+01:00",
+    "valueQuantity": {
+     "value": 99.5,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-012"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-012-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-012-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-012"
+    },
+    "effectiveDateTime": "2026-03-22T13:30:00+01:00",
+    "valueQuantity": {
+     "value": 70.3,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-012"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-012-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-012-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-012"
+    },
+    "effectiveDateTime": "2026-03-23T19:00:00+01:00",
+    "valueQuantity": {
+     "value": 99.2,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-012"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-013",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-013",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100012"
+     }
+    ],
+    "name": [
+     {
+      "family": "Petit",
+      "given": [
+       "Louis"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 12"
+     },
+     {
+      "system": "email",
+      "value": "patient13@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1944-05-09",
+    "address": [
+     {
+      "line": [
+       "89 rue de la Démo"
+      ],
+      "city": "Boulogne-Billancourt",
+      "postalCode": "92100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-013-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-013-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-013"
+    },
+    "effectiveDateTime": "2026-03-04T14:45:00+01:00",
+    "valueQuantity": {
+     "value": 96.8,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-013"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-013-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-013-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-013"
+    },
+    "effectiveDateTime": "2026-03-09T14:00:00+01:00",
+    "valueQuantity": {
+     "value": 94.5,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-013"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-013-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-013-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-013"
+    },
+    "effectiveDateTime": "2026-03-21T15:30:00+01:00",
+    "valueQuantity": {
+     "value": 93.7,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-013"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-014",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-014",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100013"
+     }
+    ],
+    "name": [
+     {
+      "family": "Martin",
+      "given": [
+       "Camille"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 13"
+     },
+     {
+      "system": "email",
+      "value": "patient14@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1967-04-22",
+    "address": [
+     {
+      "line": [
+       "34 rue de la Démo"
+      ],
+      "city": "Corbeil-Essonnes",
+      "postalCode": "91100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-014-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-014-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-014"
+    },
+    "effectiveDateTime": "2026-03-12T16:00:00+01:00",
+    "valueQuantity": {
+     "value": 38.1,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-014"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-014-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-014-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-014"
+    },
+    "effectiveDateTime": "2026-03-23T17:45:00+01:00",
+    "valueQuantity": {
+     "value": 127.6,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-014"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-014-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-014-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-014"
+    },
+    "effectiveDateTime": "2026-03-28T15:15:00+01:00",
+    "valueQuantity": {
+     "value": 36.7,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-014"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-015",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-015",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100014"
+     }
+    ],
+    "name": [
+     {
+      "family": "Martin",
+      "given": [
+       "Inès"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 14"
+     },
+     {
+      "system": "email",
+      "value": "patient15@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1969-05-11",
+    "address": [
+     {
+      "line": [
+       "44 rue de la Démo"
+      ],
+      "city": "Boulogne-Billancourt",
+      "postalCode": "92100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-015-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-015-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-015"
+    },
+    "effectiveDateTime": "2026-03-23T08:30:00+01:00",
+    "valueQuantity": {
+     "value": 37.9,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-015"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-015-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-015-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-015"
+    },
+    "effectiveDateTime": "2026-03-02T11:15:00+01:00",
+    "valueQuantity": {
+     "value": 66.0,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-015"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-015-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-015-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-015"
+    },
+    "effectiveDateTime": "2026-03-12T13:15:00+01:00",
+    "valueQuantity": {
+     "value": 36.8,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-015"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-016",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-016",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100015"
+     }
+    ],
+    "name": [
+     {
+      "family": "Martin",
+      "given": [
+       "Léa"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 15"
+     },
+     {
+      "system": "email",
+      "value": "patient16@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1962-09-24",
+    "address": [
+     {
+      "line": [
+       "10 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-016-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-016-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-016"
+    },
+    "effectiveDateTime": "2026-03-13T12:30:00+01:00",
+    "valueQuantity": {
+     "value": 37.1,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-016"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-016-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-016-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-016"
+    },
+    "effectiveDateTime": "2026-03-18T14:45:00+01:00",
+    "valueQuantity": {
+     "value": 73.5,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-016"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-016-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-016-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-016"
+    },
+    "effectiveDateTime": "2026-03-04T14:00:00+01:00",
+    "valueQuantity": {
+     "value": 37.7,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-016"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-017",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-017",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100016"
+     }
+    ],
+    "name": [
+     {
+      "family": "Moreau",
+      "given": [
+       "Nathan"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 16"
+     },
+     {
+      "system": "email",
+      "value": "patient17@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1936-03-21",
+    "address": [
+     {
+      "line": [
+       "73 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-017-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-017-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-017"
+    },
+    "effectiveDateTime": "2026-03-26T17:00:00+01:00",
+    "valueQuantity": {
+     "value": 75.9,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-017"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-017-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-017-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-017"
+    },
+    "effectiveDateTime": "2026-03-07T18:15:00+01:00",
+    "valueQuantity": {
+     "value": 62.4,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-017"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-017-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-017-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-017"
+    },
+    "effectiveDateTime": "2026-03-04T13:30:00+01:00",
+    "valueQuantity": {
+     "value": 77.9,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-017"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-018",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-018",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100017"
+     }
+    ],
+    "name": [
+     {
+      "family": "Simon",
+      "given": [
+       "Louis"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 17"
+     },
+     {
+      "system": "email",
+      "value": "patient18@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1959-04-09",
+    "address": [
+     {
+      "line": [
+       "75 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-018-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-018-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-018"
+    },
+    "effectiveDateTime": "2026-03-14T10:30:00+01:00",
+    "valueQuantity": {
+     "value": 93.7,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-018"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-018-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-018-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-018"
+    },
+    "effectiveDateTime": "2026-03-17T14:15:00+01:00",
+    "valueQuantity": {
+     "value": 64.8,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-018"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-018-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-018-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-018"
+    },
+    "effectiveDateTime": "2026-03-09T10:00:00+01:00",
+    "valueQuantity": {
+     "value": 159.7,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-018"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-019",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-019",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100018"
+     }
+    ],
+    "name": [
+     {
+      "family": "Bernard",
+      "given": [
+       "Hugo"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 18"
+     },
+     {
+      "system": "email",
+      "value": "patient19@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1950-07-12",
+    "address": [
+     {
+      "line": [
+       "70 rue de la Démo"
+      ],
+      "city": "Corbeil-Essonnes",
+      "postalCode": "91100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-019-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-019-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-019"
+    },
+    "effectiveDateTime": "2026-03-04T16:45:00+01:00",
+    "valueQuantity": {
+     "value": 93.9,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-019"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-019-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-019-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-019"
+    },
+    "effectiveDateTime": "2026-03-21T17:45:00+01:00",
+    "valueQuantity": {
+     "value": 149.0,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-019"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-019-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-019-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-019"
+    },
+    "effectiveDateTime": "2026-03-22T12:45:00+01:00",
+    "valueQuantity": {
+     "value": 159.8,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-019"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-020",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-020",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100019"
+     }
+    ],
+    "name": [
+     {
+      "family": "Faure",
+      "given": [
+       "Hugo"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 19"
+     },
+     {
+      "system": "email",
+      "value": "patient20@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "2001-06-23",
+    "address": [
+     {
+      "line": [
+       "96 rue de la Démo"
+      ],
+      "city": "Corbeil-Essonnes",
+      "postalCode": "91100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-020-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-020-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-020"
+    },
+    "effectiveDateTime": "2026-03-27T12:00:00+01:00",
+    "valueQuantity": {
+     "value": 37.4,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-020"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-020-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-020-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-020"
+    },
+    "effectiveDateTime": "2026-03-20T19:15:00+01:00",
+    "valueQuantity": {
+     "value": 38.1,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-020"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-020-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-020-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-020"
+    },
+    "effectiveDateTime": "2026-03-23T18:45:00+01:00",
+    "valueQuantity": {
+     "value": 36.3,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-020"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-021",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-021",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100020"
+     }
+    ],
+    "name": [
+     {
+      "family": "Martin",
+      "given": [
+       "Louis"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 20"
+     },
+     {
+      "system": "email",
+      "value": "patient21@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1998-03-02",
+    "address": [
+     {
+      "line": [
+       "39 rue de la Démo"
+      ],
+      "city": "Évry-Courcouronnes",
+      "postalCode": "91000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-021-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-021-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-021"
+    },
+    "effectiveDateTime": "2026-03-25T14:30:00+01:00",
+    "valueQuantity": {
+     "value": 94.5,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-021"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-021-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-021-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-021"
+    },
+    "effectiveDateTime": "2026-03-28T17:45:00+01:00",
+    "valueQuantity": {
+     "value": 98.8,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-021"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-021-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-021-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-021"
+    },
+    "effectiveDateTime": "2026-03-17T15:00:00+01:00",
+    "valueQuantity": {
+     "value": 121.6,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-021"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-022",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-022",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100021"
+     }
+    ],
+    "name": [
+     {
+      "family": "Simon",
+      "given": [
+       "Hugo"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 21"
+     },
+     {
+      "system": "email",
+      "value": "patient22@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1941-09-20",
+    "address": [
+     {
+      "line": [
+       "54 rue de la Démo"
+      ],
+      "city": "Boulogne-Billancourt",
+      "postalCode": "92100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-022-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-022-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-022"
+    },
+    "effectiveDateTime": "2026-03-28T19:45:00+01:00",
+    "valueQuantity": {
+     "value": 124.7,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-022"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-022-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-022-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-022"
+    },
+    "effectiveDateTime": "2026-03-28T19:00:00+01:00",
+    "valueQuantity": {
+     "value": 96.9,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-022"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-022-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-022-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-022"
+    },
+    "effectiveDateTime": "2026-03-24T09:30:00+01:00",
+    "valueQuantity": {
+     "value": 80.3,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-022"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-023",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-023",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100022"
+     }
+    ],
+    "name": [
+     {
+      "family": "Bernard",
+      "given": [
+       "Adam"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 22"
+     },
+     {
+      "system": "email",
+      "value": "patient23@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1974-05-25",
+    "address": [
+     {
+      "line": [
+       "53 rue de la Démo"
+      ],
+      "city": "Paris",
+      "postalCode": "75013",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-023-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-023-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-023"
+    },
+    "effectiveDateTime": "2026-03-26T13:00:00+01:00",
+    "valueQuantity": {
+     "value": 84.7,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-023"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-023-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-023-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-023"
+    },
+    "effectiveDateTime": "2026-03-08T11:30:00+01:00",
+    "valueQuantity": {
+     "value": 93.3,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-023"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-023-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-023-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-023"
+    },
+    "effectiveDateTime": "2026-03-16T13:15:00+01:00",
+    "valueQuantity": {
+     "value": 79.7,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-023"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-024",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-024",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100023"
+     }
+    ],
+    "name": [
+     {
+      "family": "Durand",
+      "given": [
+       "Nathan"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 23"
+     },
+     {
+      "system": "email",
+      "value": "patient24@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1942-01-20",
+    "address": [
+     {
+      "line": [
+       "60 rue de la Démo"
+      ],
+      "city": "Boulogne-Billancourt",
+      "postalCode": "92100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-024-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-024-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-024"
+    },
+    "effectiveDateTime": "2026-03-15T07:00:00+01:00",
+    "valueQuantity": {
+     "value": 112.4,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-024"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-024-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-024-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-024"
+    },
+    "effectiveDateTime": "2026-03-01T07:15:00+01:00",
+    "valueQuantity": {
+     "value": 96.8,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-024"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-024-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-024-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-024"
+    },
+    "effectiveDateTime": "2026-03-23T15:30:00+01:00",
+    "valueQuantity": {
+     "value": 67.8,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-024"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-025",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-025",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100024"
+     }
+    ],
+    "name": [
+     {
+      "family": "Martin",
+      "given": [
+       "Jules"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 24"
+     },
+     {
+      "system": "email",
+      "value": "patient25@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1946-10-21",
+    "address": [
+     {
+      "line": [
+       "120 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-025-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-025-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-025"
+    },
+    "effectiveDateTime": "2026-03-21T08:30:00+01:00",
+    "valueQuantity": {
+     "value": 37.9,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-025"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-025-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-025-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-025"
+    },
+    "effectiveDateTime": "2026-03-13T19:30:00+01:00",
+    "valueQuantity": {
+     "value": 98.5,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-025"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-025-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-025-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-025"
+    },
+    "effectiveDateTime": "2026-03-17T19:15:00+01:00",
+    "valueQuantity": {
+     "value": 61.5,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-025"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-026",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-026",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100025"
+     }
+    ],
+    "name": [
+     {
+      "family": "Laurent",
+      "given": [
+       "Hugo"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 25"
+     },
+     {
+      "system": "email",
+      "value": "patient26@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1988-06-26",
+    "address": [
+     {
+      "line": [
+       "81 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-026-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-026-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-026"
+    },
+    "effectiveDateTime": "2026-03-02T07:45:00+01:00",
+    "valueQuantity": {
+     "value": 70.2,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-026"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-026-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-026-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-026"
+    },
+    "effectiveDateTime": "2026-03-17T17:15:00+01:00",
+    "valueQuantity": {
+     "value": 69.2,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-026"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-026-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-026-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-026"
+    },
+    "effectiveDateTime": "2026-03-17T11:00:00+01:00",
+    "valueQuantity": {
+     "value": 83.1,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-026"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-027",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-027",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100026"
+     }
+    ],
+    "name": [
+     {
+      "family": "Bernard",
+      "given": [
+       "Louis"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 26"
+     },
+     {
+      "system": "email",
+      "value": "patient27@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1986-02-04",
+    "address": [
+     {
+      "line": [
+       "54 rue de la Démo"
+      ],
+      "city": "Boulogne-Billancourt",
+      "postalCode": "92100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-027-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-027-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-027"
+    },
+    "effectiveDateTime": "2026-03-24T07:45:00+01:00",
+    "valueQuantity": {
+     "value": 95.6,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-027"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-027-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-027-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-027"
+    },
+    "effectiveDateTime": "2026-03-01T14:30:00+01:00",
+    "valueQuantity": {
+     "value": 135.0,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-027"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-027-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-027-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-027"
+    },
+    "effectiveDateTime": "2026-03-12T08:00:00+01:00",
+    "valueQuantity": {
+     "value": 74.4,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-027"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-028",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-028",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100027"
+     }
+    ],
+    "name": [
+     {
+      "family": "Laurent",
+      "given": [
+       "Inès"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 27"
+     },
+     {
+      "system": "email",
+      "value": "patient28@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1976-04-27",
+    "address": [
+     {
+      "line": [
+       "47 rue de la Démo"
+      ],
+      "city": "Évry-Courcouronnes",
+      "postalCode": "91000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-028-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-028-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-028"
+    },
+    "effectiveDateTime": "2026-03-20T09:15:00+01:00",
+    "valueQuantity": {
+     "value": 60.1,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-028"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-028-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-028-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-028"
+    },
+    "effectiveDateTime": "2026-03-24T07:30:00+01:00",
+    "valueQuantity": {
+     "value": 74.8,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-028"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-028-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-028-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-028"
+    },
+    "effectiveDateTime": "2026-03-20T10:15:00+01:00",
+    "valueQuantity": {
+     "value": 67.5,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-028"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-029",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-029",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100028"
+     }
+    ],
+    "name": [
+     {
+      "family": "Laurent",
+      "given": [
+       "Léa"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 28"
+     },
+     {
+      "system": "email",
+      "value": "patient29@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1993-01-07",
+    "address": [
+     {
+      "line": [
+       "47 rue de la Démo"
+      ],
+      "city": "Évry-Courcouronnes",
+      "postalCode": "91000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-029-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-029-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-029"
+    },
+    "effectiveDateTime": "2026-03-16T11:30:00+01:00",
+    "valueQuantity": {
+     "value": 38.3,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-029"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-029-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-029-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-029"
+    },
+    "effectiveDateTime": "2026-03-06T16:00:00+01:00",
+    "valueQuantity": {
+     "value": 36.4,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-029"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-029-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-029-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-029"
+    },
+    "effectiveDateTime": "2026-03-06T13:15:00+01:00",
+    "valueQuantity": {
+     "value": 38.3,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-029"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-030",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-030",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100029"
+     }
+    ],
+    "name": [
+     {
+      "family": "Garnier",
+      "given": [
+       "Hugo"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 29"
+     },
+     {
+      "system": "email",
+      "value": "patient30@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1972-03-10",
+    "address": [
+     {
+      "line": [
+       "48 rue de la Démo"
+      ],
+      "city": "Corbeil-Essonnes",
+      "postalCode": "91100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-030-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-030-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-030"
+    },
+    "effectiveDateTime": "2026-03-22T07:15:00+01:00",
+    "valueQuantity": {
+     "value": 124.1,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-030"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-030-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-030-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-030"
+    },
+    "effectiveDateTime": "2026-03-03T18:00:00+01:00",
+    "valueQuantity": {
+     "value": 81.9,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-030"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-030-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-030-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-030"
+    },
+    "effectiveDateTime": "2026-03-18T13:15:00+01:00",
+    "valueQuantity": {
+     "value": 37.5,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-030"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-031",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-031",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100030"
+     }
+    ],
+    "name": [
+     {
+      "family": "Bernard",
+      "given": [
+       "Hugo"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 30"
+     },
+     {
+      "system": "email",
+      "value": "patient31@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1977-11-12",
+    "address": [
+     {
+      "line": [
+       "82 rue de la Démo"
+      ],
+      "city": "Paris",
+      "postalCode": "75013",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-031-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-031-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-031"
+    },
+    "effectiveDateTime": "2026-03-13T13:00:00+01:00",
+    "valueQuantity": {
+     "value": 76.7,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-031"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-031-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-031-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-031"
+    },
+    "effectiveDateTime": "2026-03-15T10:30:00+01:00",
+    "valueQuantity": {
+     "value": 36.8,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-031"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-031-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-031-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-031"
+    },
+    "effectiveDateTime": "2026-03-03T09:00:00+01:00",
+    "valueQuantity": {
+     "value": 94.9,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-031"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-032",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-032",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100031"
+     }
+    ],
+    "name": [
+     {
+      "family": "Michel",
+      "given": [
+       "Chloé"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 31"
+     },
+     {
+      "system": "email",
+      "value": "patient32@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1951-07-14",
+    "address": [
+     {
+      "line": [
+       "23 rue de la Démo"
+      ],
+      "city": "Boulogne-Billancourt",
+      "postalCode": "92100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-032-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-032-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-032"
+    },
+    "effectiveDateTime": "2026-03-15T12:15:00+01:00",
+    "valueQuantity": {
+     "value": 95.1,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-032"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-032-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-032-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-032"
+    },
+    "effectiveDateTime": "2026-03-16T19:15:00+01:00",
+    "valueQuantity": {
+     "value": 71.8,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-032"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-032-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-032-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-032"
+    },
+    "effectiveDateTime": "2026-03-20T14:00:00+01:00",
+    "valueQuantity": {
+     "value": 89.7,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-032"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-033",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-033",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100032"
+     }
+    ],
+    "name": [
+     {
+      "family": "Garnier",
+      "given": [
+       "Jules"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 32"
+     },
+     {
+      "system": "email",
+      "value": "patient33@exemple.fr"
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1970-07-23",
+    "address": [
+     {
+      "line": [
+       "97 rue de la Démo"
+      ],
+      "city": "Évry-Courcouronnes",
+      "postalCode": "91000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-033-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-033-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-033"
+    },
+    "effectiveDateTime": "2026-03-03T17:45:00+01:00",
+    "valueQuantity": {
+     "value": 138.4,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-033"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-033-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-033-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-033"
+    },
+    "effectiveDateTime": "2026-03-18T19:45:00+01:00",
+    "valueQuantity": {
+     "value": 94.7,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-033"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-033-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-033-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-033"
+    },
+    "effectiveDateTime": "2026-03-04T11:00:00+01:00",
+    "valueQuantity": {
+     "value": 60.0,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-033"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-034",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-034",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100033"
+     }
+    ],
+    "name": [
+     {
+      "family": "Faure",
+      "given": [
+       "Chloé"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 33"
+     },
+     {
+      "system": "email",
+      "value": "patient34@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1999-02-24",
+    "address": [
+     {
+      "line": [
+       "33 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-034-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-034-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-034"
+    },
+    "effectiveDateTime": "2026-03-10T19:15:00+01:00",
+    "valueQuantity": {
+     "value": 37.5,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-034"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-034-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-034-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-034"
+    },
+    "effectiveDateTime": "2026-03-03T19:30:00+01:00",
+    "valueQuantity": {
+     "value": 72.2,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-034"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-034-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-034-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-034"
+    },
+    "effectiveDateTime": "2026-03-04T15:15:00+01:00",
+    "valueQuantity": {
+     "value": 38.2,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-034"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-035",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-035",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100034"
+     }
+    ],
+    "name": [
+     {
+      "family": "Simon",
+      "given": [
+       "Léa"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 34"
+     },
+     {
+      "system": "email",
+      "value": "patient35@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1940-09-05",
+    "address": [
+     {
+      "line": [
+       "74 rue de la Démo"
+      ],
+      "city": "Corbeil-Essonnes",
+      "postalCode": "91100",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-035-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-035-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-035"
+    },
+    "effectiveDateTime": "2026-03-18T08:45:00+01:00",
+    "valueQuantity": {
+     "value": 98.7,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-035"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-035-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-035-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2339-0",
+       "display": "Glucose sanguin"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-035"
+    },
+    "effectiveDateTime": "2026-03-24T19:30:00+01:00",
+    "valueQuantity": {
+     "value": 96.3,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-035"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-035-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-035-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-035"
+    },
+    "effectiveDateTime": "2026-03-19T17:15:00+01:00",
+    "valueQuantity": {
+     "value": 36.5,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-035"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-036",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-036",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100035"
+     }
+    ],
+    "name": [
+     {
+      "family": "Simon",
+      "given": [
+       "Jules"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 35"
+     },
+     {
+      "system": "email",
+      "value": "patient36@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1980-03-18",
+    "address": [
+     {
+      "line": [
+       "86 rue de la Démo"
+      ],
+      "city": "Évry-Courcouronnes",
+      "postalCode": "91000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-036-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-036-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-036"
+    },
+    "effectiveDateTime": "2026-03-12T17:45:00+01:00",
+    "valueQuantity": {
+     "value": 37.8,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-036"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-036-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-036-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-036"
+    },
+    "effectiveDateTime": "2026-03-16T14:30:00+01:00",
+    "valueQuantity": {
+     "value": 96.0,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-036"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-036-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-036-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-036"
+    },
+    "effectiveDateTime": "2026-03-15T11:15:00+01:00",
+    "valueQuantity": {
+     "value": 89.8,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-036"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-037",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-037",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100036"
+     }
+    ],
+    "name": [
+     {
+      "family": "Martin",
+      "given": [
+       "Nathan"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 36"
+     },
+     {
+      "system": "email",
+      "value": "patient37@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1959-07-01",
+    "address": [
+     {
+      "line": [
+       "109 rue de la Démo"
+      ],
+      "city": "Évry-Courcouronnes",
+      "postalCode": "91000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-037-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-037-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-037"
+    },
+    "effectiveDateTime": "2026-03-22T08:45:00+01:00",
+    "valueQuantity": {
+     "value": 60.3,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-037"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-037-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-037-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-037"
+    },
+    "effectiveDateTime": "2026-03-04T16:00:00+01:00",
+    "valueQuantity": {
+     "value": 100.0,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-037"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-037-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-037-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-037"
+    },
+    "effectiveDateTime": "2026-03-24T10:15:00+01:00",
+    "valueQuantity": {
+     "value": 37.9,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-037"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-038",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-038",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100037"
+     }
+    ],
+    "name": [
+     {
+      "family": "Bernard",
+      "given": [
+       "Chloé"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 37"
+     },
+     {
+      "system": "email",
+      "value": "patient38@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1956-12-11",
+    "address": [
+     {
+      "line": [
+       "50 rue de la Démo"
+      ],
+      "city": "Paris",
+      "postalCode": "75013",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-038-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-038-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-038"
+    },
+    "effectiveDateTime": "2026-03-11T13:45:00+01:00",
+    "valueQuantity": {
+     "value": 93.9,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-038"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-038-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-038-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-038"
+    },
+    "effectiveDateTime": "2026-03-17T12:15:00+01:00",
+    "valueQuantity": {
+     "value": 94.3,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-038"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-038-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-038-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-038"
+    },
+    "effectiveDateTime": "2026-03-15T12:45:00+01:00",
+    "valueQuantity": {
+     "value": 95.6,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-038"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-039",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-039",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100038"
+     }
+    ],
+    "name": [
+     {
+      "family": "Petit",
+      "given": [
+       "Hugo"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 38"
+     },
+     {
+      "system": "email",
+      "value": "patient39@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1981-04-19",
+    "address": [
+     {
+      "line": [
+       "91 rue de la Démo"
+      ],
+      "city": "Créteil",
+      "postalCode": "94000",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-039-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-039-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-039"
+    },
+    "effectiveDateTime": "2026-03-13T07:15:00+01:00",
+    "valueQuantity": {
+     "value": 85.3,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-039"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-039-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-039-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "59408-5",
+       "display": "SpO2"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-039"
+    },
+    "effectiveDateTime": "2026-03-12T07:15:00+01:00",
+    "valueQuantity": {
+     "value": 94.4,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-039"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-039-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-039-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-039"
+    },
+    "effectiveDateTime": "2026-03-20T08:30:00+01:00",
+    "valueQuantity": {
+     "value": 37.9,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-039"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-040",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "pat-040",
+    "identifier": [
+     {
+      "system": "https://hopital-demo.example/ipp",
+      "value": "IPP100039"
+     }
+    ],
+    "name": [
+     {
+      "family": "Michel",
+      "given": [
+       "Camille"
+      ]
+     }
+    ],
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "01 99 00 00 39"
+     },
+     {
+      "system": "email",
+      "value": "patient40@exemple.fr"
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1984-10-15",
+    "address": [
+     {
+      "line": [
+       "63 rue de la Démo"
+      ],
+      "city": "Paris",
+      "postalCode": "75013",
+      "country": "FR"
+     }
+    ],
+    "text": {
+     "status": "generated",
+     "div": "<div>Patient fictif</div>"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-040-obs0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-040-obs0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-040"
+    },
+    "effectiveDateTime": "2026-03-23T14:15:00+01:00",
+    "valueQuantity": {
+     "value": 36.9,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-040"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-040-obs1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-040-obs1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8867-4",
+       "display": "Fréquence cardiaque"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-040"
+    },
+    "effectiveDateTime": "2026-03-02T07:15:00+01:00",
+    "valueQuantity": {
+     "value": 74.0,
+     "unit": "/min",
+     "system": "http://unitsofmeasure.org",
+     "code": "/min"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-040"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:pat-040-obs2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "pat-040-obs2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8310-5",
+       "display": "Température corporelle"
+      }
+     ]
+    },
+    "subject": {
+     "reference": "Patient/pat-040"
+    },
+    "effectiveDateTime": "2026-03-21T07:15:00+01:00",
+    "valueQuantity": {
+     "value": 36.3,
+     "unit": "Cel",
+     "system": "http://unitsofmeasure.org",
+     "code": "Cel"
+    },
+    "note": [
+     {
+      "text": "Mesure prise par l'infirmière de garde pour pat-040"
+     }
+    ]
+   }
+  }
+ ]
+}
