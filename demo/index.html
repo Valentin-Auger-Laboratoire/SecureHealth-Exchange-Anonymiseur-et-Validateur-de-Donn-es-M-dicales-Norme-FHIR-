@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureHealth : FHIR</title>
+  <meta name="description" content="Validation de ressources FHIR, pseudonymisation par HMAC-SHA256, décalage des dates et k-anonymat, sur des données fictives.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://valentin-auger-laboratoire.github.io/portfolio/demos/securehealth/">
+  <meta property="og:title" content="SecureHealth Exchange : validateur et anonymiseur FHIR">
+  <meta property="og:description" content="Validation de ressources FHIR, pseudonymisation par HMAC-SHA256, décalage des dates et k-anonymat, sur des données fictives.">
+  <meta property="og:image" content="https://valentin-auger-laboratoire.github.io/portfolio/assets/projets/securehealth.jpg">
+  <meta property="og:image:width" content="960">
+  <meta property="og:image:height" content="600">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="commun.css">
+  <style>
+    .json { font: 0.72rem/1.45 var(--mono); background: #0a0a0b; border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; max-height: 430px; overflow: auto; color: var(--line); white-space: pre; margin: 0; }
+    .json .k { color: #8ab4ff; } .json .s { color: #c9c9cc; } .json .x { color: #ff8a8a; } .json .p { color: #7bd389; }
+    .cote h3 { margin-top: 0; }
+    .retire { color: #ff8a8a; font: 0.8rem var(--mono); }
+    .etapes { margin: 0 0 10px; padding-left: 18px; font-size: 0.85rem; color: var(--line); }
+    .etapes li + li { margin-top: 3px; }
+    .tablewrap { max-height: 280px; overflow: auto; }
+    tr.rare td { color: #ff8a8a; }
+    .champ { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+    .champ label { font: 0.78rem var(--mono); color: var(--dim); white-space: nowrap; }
+    .champ input[type=text] { flex: 1; min-width: 0; font: 0.8rem var(--mono); background: #0a0a0b; color: var(--text); border: 1px solid var(--border-hi); border-radius: 6px; padding: 6px 8px; }
+    .msg { font: 0.78rem var(--mono); color: var(--warn); min-height: 1em; margin: 6px 0 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="back" href="https://valentin-auger-laboratoire.github.io/portfolio/#projets" data-t="back">← Retour au portfolio</a>
+      <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang="fr">FR</button><button type="button" data-lang="en">EN</button></div>
+    </div>
+    <p class="eyebrow" data-t="eyebrow"></p>
+    <h1 data-t="title"></h1>
+    <p class="intro" data-t="intro"></p>
+    <p class="warnbox" data-t="warn"></p>
+    <div class="grid">
+      <div class="stack">
+        <div class="panel">
+          <h2 data-t="srcT"></h2>
+          <div class="scen">
+            <button type="button" class="btn" data-src="20" data-t="s20"></button>
+            <button type="button" class="btn" data-src="40" data-t="s40"></button>
+            <button type="button" class="btn" data-src="80" data-t="s80"></button>
+          </div>
+          <h3 data-t="injT"></h3>
+          <div class="seg">
+            <button type="button" class="btn" data-inj="genre" data-t="iGenre"></button>
+            <button type="button" class="btn" data-inj="date" data-t="iDate"></button>
+            <button type="button" class="btn" data-inj="loinc" data-t="iLoinc"></button>
+            <button type="button" class="btn" data-inj="ref" data-t="iRef"></button>
+            <button type="button" class="btn" data-inj="fuseau" data-t="iFuseau"></button>
+            <button type="button" class="btn" data-inj="valeur" data-t="iValeur"></button>
+          </div>
+          <h3 data-t="pasteT"></h3>
+          <textarea id="colle" spellcheck="false" aria-label="FHIR JSON"></textarea>
+          <div class="seg" style="margin-top:8px"><button type="button" class="btn primary" id="analyser" data-t="analyser"></button><button type="button" class="btn" id="exemple" data-t="exemple"></button></div>
+          <p class="msg" id="msg"></p>
+        </div>
+        <div class="panel">
+          <h2 data-t="anT"></h2>
+          <div class="champ"><label for="cle" data-t="cleL"></label><input type="text" id="cle" value="cle-de-demonstration" spellcheck="false"></div>
+          <div class="ctl"><label for="kc" data-t="kL"></label><output id="okc"></output><input type="range" id="kc" min="2" max="10" step="1" value="5"></div>
+          <label class="check"><input type="checkbox" id="dec" checked> <span data-t="decL"></span></label>
+          <p class="hint" data-t="cleH"></p>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="panel"><dl class="kpis" id="kpis"></dl></div>
+        <div class="panel">
+          <h2 data-t="valT"></h2>
+          <div class="log" id="valid"></div>
+        </div>
+        <div class="panel">
+          <h2 data-t="cmpT"></h2>
+          <div class="champ"><label for="pat" data-t="patL"></label><select id="pat"></select></div>
+          <div class="row2">
+            <div class="cote"><h3 data-t="avant"></h3><pre class="json" id="jAvant"></pre></div>
+            <div class="cote"><h3 data-t="apres"></h3><pre class="json" id="jApres"></pre></div>
+          </div>
+        </div>
+        <div class="panel row2">
+          <div><h2 data-t="rapT"></h2><div class="tablewrap"><table id="rapport"></table></div></div>
+          <div><h2 data-t="kT"></h2><ol class="etapes" id="etapes"></ol><div class="tablewrap"><table id="groupes"></table></div></div>
+        </div>
+        <div class="panel note">
+          <h2 data-t="howT"></h2><p data-t="how1"></p><p data-t="how2"></p><p data-t="how3"></p>
+          <p><a href="https://github.com/Valentin-Auger-Laboratoire/SecureHealth-Exchange-Anonymiseur-et-Validateur-de-Donn-es-M-dicales-Norme-FHIR-" target="_blank" rel="noopener" data-t="repo"></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="commun.js"></script>
+  <script src="securehealth.js"></script>
+  <script>
+  (function () {
+    'use strict';
+    const S = window.SecureHealth, C = window.Commun, $ = (id) => document.getElementById(id);
+    const T = {
+      fr: {
+        back: '← Retour au portfolio', eyebrow: 'Démo · projet personnel en Python (mars 2026)', title: 'SecureHealth Exchange : validateur et anonymiseur FHIR',
+        intro: "Avant d'envoyer des données de santé à une équipe de recherche, il faut vérifier qu'elles respectent la norme d'échange FHIR, puis retirer ce qui permet de retrouver les patients. La démo valide un lot de ressources Patient et Observation, le pseudonymise par HMAC-SHA256, décale les dates, puis généralise jusqu'au k-anonymat demandé.",
+        warn: "Toutes les données sont fictives et générées dans la page ; rien n'est envoyé. Validation simplifiée (pas le validateur officiel HL7). Projet d'étude : pas un outil certifié pour de vraies données de santé.",
+        srcT: 'Lot de données fictives', s20: '20 patients', s40: '40 patients', s80: '80 patients',
+        injT: 'Injecter une erreur', iGenre: 'genre « homme »', iDate: 'date 12/03/1990', iLoinc: 'LOINC faux', iRef: 'patient inconnu', iFuseau: 'heure sans fuseau', iValeur: 'valeur en texte',
+        pasteT: 'Ou coller un Bundle FHIR (JSON)', analyser: 'Analyser', exemple: 'Copier le lot actuel ici',
+        anT: 'Anonymisation', cleL: 'Clé secrète', kL: 'k visé', decL: 'Décaler les dates (même décalage pour un patient)',
+        cleH: "Même clé, mêmes pseudonymes : on peut relier deux envois sans jamais revoir l'identité. Changez un caractère de la clé : tout change.",
+        kRes: 'Ressources', kErr: 'Erreurs', kAv: 'Avertissements', kK0: 'k après pseudonymisation', kK: 'k final', kRet: 'Patients retirés',
+        valT: 'Validation FHIR', valOk: 'Aucune erreur : le lot respecte les règles vérifiées.', erreur: 'ERREUR', avert: 'avertissement',
+        e_id: "identifiant de ressource invalide", e_genre: 'genre « {v} » hors liste (male, female, other, unknown)', e_date: 'date hors format AAAA-MM-JJ',
+        e_systeme: "identifiant sans système (URL ou urn)", e_statut: 'statut absent ou invalide', e_code: 'aucun code de mesure', e_loinc: 'code LOINC « {v} » invalide (chiffre de contrôle)',
+        e_ref: 'référence patient mal formée', e_refAbsente: '{v} ne correspond à aucun patient du lot', e_dateHeure: 'date-heure sans fuseau horaire', e_valeur: 'valeur non numérique',
+        e_ucum: 'unité non codée en UCUM', e_type: 'type de ressource « {v} » non géré',
+        cmpT: 'Avant / après, pour un patient', patL: 'Patient', avant: 'Données d\'origine', apres: 'Données envoyées', retireK: '→ patient retiré : son groupe restait plus petit que k.',
+        rapT: "Rapport d'anonymisation", rChamp: 'Traitement', rN: 'Nb',
+        r_name: 'noms supprimés', r_telecom: 'téléphones / e-mails supprimés', r_text: 'textes libres supprimés', r_photo: 'photos supprimées', r_contact: 'contacts supprimés',
+        r_identifiant: 'identifiants pseudonymisés (HMAC)', r_naissance: 'dates de naissance réduites à l\'année', r_adresse: 'adresses réduites au département', r_date: 'dates de mesure décalées',
+        kT: 'k-anonymat (année, genre, département)', e0: 'Aucune étape : k est déjà atteint.', ans10: 'années de naissance regroupées par 10 ans', ans20: 'regroupées par 20 ans', dept: 'département retiré',
+        retrait: '{v} patient(s) retiré(s) : groupes encore trop petits', kFin: 'k final = {v}', gA: 'Année', gG: 'Genre', gD: 'Dépt', gN: 'Patients',
+        jsonErr: 'JSON illisible : {v}', colleOk: 'Bundle analysé ({v} ressources).', vide: 'Aucun patient dans ces données.',
+        howT: "Comment c'est calculé", how1: "Validation : formats des identifiants et des dates, genre dans la liste FHIR, codes LOINC vérifiés par leur chiffre de contrôle (Luhn modulo 10), références vers un patient présent, date-heure avec fuseau, valeur numérique en UCUM.",
+        how2: "Pseudonymisation : chaque identifiant devient les 16 premiers caractères hexadécimaux du HMAC-SHA256 de la clé et de l'identifiant (SHA-256 écrit à la main, vérifié contre OpenSSL). Les dates d'un patient sont toutes décalées du même nombre de jours (entre −180 et +180), tiré lui aussi de la clé : les intervalles restent justes.",
+        how3: "k-anonymat : chaque combinaison (année, genre, département) doit concerner au moins k patients. Sinon on regroupe les années par 10, puis 20 ans, on retire le département, et en dernier recours on retire les patients isolés. Au-delà de 89 ans, l'âge devient « 90 ans et plus ».",
+        repo: 'Code Python, tests et explications sur GitHub ↗',
+      },
+      en: {
+        back: '← Back to portfolio', eyebrow: 'Demo · personal project in Python (March 2026)', title: 'SecureHealth Exchange: FHIR validator and anonymiser',
+        intro: 'Before sending health data to a research team, you must check that it follows the FHIR exchange standard, then remove what makes patients identifiable. The demo validates a batch of Patient and Observation resources, pseudonymises it with HMAC-SHA256, shifts dates, then generalises until the requested k-anonymity.',
+        warn: 'All data are fictitious and generated in the page; nothing is sent. Simplified validation (not the official HL7 validator). Study project: not a certified tool for real health data.',
+        srcT: 'Fictitious data batch', s20: '20 patients', s40: '40 patients', s80: '80 patients',
+        injT: 'Inject an error', iGenre: 'gender "homme"', iDate: 'date 12/03/1990', iLoinc: 'wrong LOINC', iRef: 'unknown patient', iFuseau: 'time without zone', iValeur: 'value as text',
+        pasteT: 'Or paste a FHIR Bundle (JSON)', analyser: 'Analyse', exemple: 'Copy the current batch here',
+        anT: 'Anonymisation', cleL: 'Secret key', kL: 'Target k', decL: 'Shift dates (same shift for one patient)',
+        cleH: 'Same key, same pseudonyms: two exports can be linked without ever seeing the identity again. Change one character of the key: everything changes.',
+        kRes: 'Resources', kErr: 'Errors', kAv: 'Warnings', kK0: 'k after pseudonymisation', kK: 'Final k', kRet: 'Patients removed',
+        valT: 'FHIR validation', valOk: 'No error: the batch follows the checked rules.', erreur: 'ERROR', avert: 'warning',
+        e_id: 'invalid resource id', e_genre: 'gender "{v}" not in the list (male, female, other, unknown)', e_date: 'date not in YYYY-MM-DD format',
+        e_systeme: 'identifier without a system (URL or urn)', e_statut: 'missing or invalid status', e_code: 'no measurement code', e_loinc: 'invalid LOINC code "{v}" (check digit)',
+        e_ref: 'malformed patient reference', e_refAbsente: '{v} matches no patient in the batch', e_dateHeure: 'date-time without time zone', e_valeur: 'non-numeric value',
+        e_ucum: 'unit not coded in UCUM', e_type: 'unsupported resource type "{v}"',
+        cmpT: 'Before / after, for one patient', patL: 'Patient', avant: 'Original data', apres: 'Data sent', retireK: '→ patient removed: their group stayed smaller than k.',
+        rapT: 'Anonymisation report', rChamp: 'Processing', rN: 'No.',
+        r_name: 'names removed', r_telecom: 'phones / e-mails removed', r_text: 'free texts removed', r_photo: 'photos removed', r_contact: 'contacts removed',
+        r_identifiant: 'identifiers pseudonymised (HMAC)', r_naissance: 'birth dates reduced to the year', r_adresse: 'addresses reduced to the département', r_date: 'measurement dates shifted',
+        kT: 'k-anonymity (year, gender, département)', e0: 'No step: k is already reached.', ans10: 'birth years grouped by 10 years', ans20: 'grouped by 20 years', dept: 'département removed',
+        retrait: '{v} patient(s) removed: groups still too small', kFin: 'final k = {v}', gA: 'Year', gG: 'Gender', gD: 'Dept', gN: 'Patients',
+        jsonErr: 'Unreadable JSON: {v}', colleOk: 'Bundle analysed ({v} resources).', vide: 'No patient in this data.',
+        howT: 'How it is computed', how1: 'Validation: id and date formats, gender in the FHIR list, LOINC codes checked by their check digit (Luhn mod 10), references to a patient present in the batch, date-time with a zone, numeric value in UCUM.',
+        how2: 'Pseudonymisation: each identifier becomes the first 16 hex characters of the HMAC-SHA256 of the key and the identifier (SHA-256 written by hand, checked against OpenSSL). All dates of a patient are shifted by the same number of days (between −180 and +180), also derived from the key: intervals stay correct.',
+        how3: 'k-anonymity: each (year, gender, département) combination must cover at least k patients. Otherwise years are grouped by 10, then 20 years, the département is removed, and as a last resort isolated patients are removed. Beyond 89, the age becomes "90 and over".',
+        repo: 'Python code, tests and explanations on GitHub ↗',
+      },
+    };
+    let src = S.lot(80, 0), nLot = 80, res = null, injN = 0;
+    const L = C.Langue(T, () => afficher());
+    const t = (k, v) => L.t(k).replace('{v}', v === undefined ? '' : v);
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+    function choisirLot(n) { nLot = n; src = S.lot(n, 0); injN = 0; $('msg').textContent = ''; remplirPatients(); calculer(); }
+    function remplirPatients() {
+      const ids = src.entry.map((e) => e.resource).filter((r) => r.resourceType === 'Patient').map((r) => r.id), cur = $('pat').value;
+      $('pat').innerHTML = ids.map((id) => `<option>${esc(id)}</option>`).join('');
+      if (ids.includes(cur)) $('pat').value = cur;
+    }
+    const res_ = (type) => src.entry.map((e) => e.resource).filter((r) => r.resourceType === type);
+    function injecter(q) {
+      src = JSON.parse(JSON.stringify(src));
+      const P = res_('Patient'), O = res_('Observation'), i = injN++;
+      const p = P[(3 * i + 1) % P.length], o = O[(7 * i + 2) % O.length], proprio = String((o.subject || {}).reference || '').split('/')[1];
+      if (q === 'genre') p.gender = 'homme';
+      else if (q === 'date') p.birthDate = '12/03/1990';
+      else if (q === 'loinc') { const c = o.code.coding[0]; c.code = c.code.slice(0, -1) + ((+c.code.slice(-1) + 1) % 10); }
+      else if (q === 'ref') o.subject.reference = 'Patient/inconnu';
+      else if (q === 'fuseau') o.effectiveDateTime = String(o.effectiveDateTime).slice(0, 19);
+      else if (q === 'valeur') o.valueQuantity.value = String(o.valueQuantity.value);
+      $('pat').value = q === 'genre' || q === 'date' ? p.id : (proprio || $('pat').value);
+      calculer();
+    }
+    function calculer() {
+      const cle = $('cle').value || ' ', kc = +$('kc').value;
+      $('okc').textContent = kc;
+      document.querySelectorAll('[data-src]').forEach((b) => b.setAttribute('aria-pressed', String(+b.dataset.src === nLot)));
+      const pbs = S.valider(src), an = S.anonymiser(src, cle, { decalerDates: $('dec').checked }), k0 = S.kAnonymat(an.bundle), kr = S.atteindreK(an.bundle, kc);
+      res = { pbs, an, k0, kr, cle, kc, kf: S.kAnonymat(kr.bundle) };
+      afficher();
+    }
+    function coloreJson(o) {
+      return esc(JSON.stringify(o, null, 2)).replace(/(&quot;(?:[^&]|&(?!quot;))*?&quot;)(\s*:)?/g, (m, s, c) => (c ? `<span class="k">${s}</span>${c}` : `<span class="s">${s}</span>`))
+        .replace(/(: )(-?\d+(?:\.\d+)?)/g, '$1<span class="p">$2</span>');
+    }
+    function afficher() {
+      if (!res) return;
+      const { pbs, an, k0, kr, kf, cle, kc } = res, nErr = S.erreurs(pbs).length;
+      const kpi = (lab, v, bad) => `<div class="kpi${bad ? ' bad' : ''}"><dt>${esc(lab)}</dt><dd>${v}</dd></div>`;
+      $('kpis').innerHTML = kpi(t('kRes'), (src.entry || []).length) + kpi(t('kErr'), nErr, nErr > 0) + kpi(t('kAv'), pbs.length - nErr) +
+        kpi(t('kK0'), k0.k, k0.k < kc) + kpi(t('kK'), kr.k || '—', kr.k < kc) + kpi(t('kRet'), kr.retires, kr.retires > 0);
+      $('valid').innerHTML = pbs.length ? pbs.map((p) => `<span class="${p.gravite === 'erreur' ? 'c' : 't'}">${t(p.gravite === 'erreur' ? 'erreur' : 'avert')}</span> <span class="d">${esc(p.chemin)}</span>\n   ${esc(t('e_' + p.cle, p.v))}`).join('\n') : `<span class="n">${esc(t('valOk'))}</span>`;
+      // Avant / après
+      const id = $('pat').value, Pav = res_('Patient').find((r) => r.id === id);
+      if (!Pav) { $('jAvant').textContent = t('vide'); $('jApres').textContent = ''; }
+      else {
+        const obsAv = res_('Observation').filter((o) => ((o.subject || {}).reference || '') === 'Patient/' + id);
+        $('jAvant').innerHTML = coloreJson([Pav, ...obsAv]);
+        const pid = S.pseudonyme(cle, 'Patient/' + id), fin = kr.bundle.entry.map((e) => e.resource);
+        const Pap = fin.find((r) => r.resourceType === 'Patient' && r.id === pid);
+        if (Pap) $('jApres').innerHTML = coloreJson([Pap, ...fin.filter((o) => o.resourceType === 'Observation' && (o.subject || {}).reference === 'Patient/' + pid)]);
+        else {
+          const Pan = an.bundle.entry.map((e) => e.resource).find((r) => r.resourceType === 'Patient' && r.id === pid);
+          $('jApres').innerHTML = `<span class="x">${esc(t('retireK'))}</span>\n\n` + (Pan ? coloreJson(Pan) : '');
+        }
+      }
+      // Rapport
+      const ordre = ['name', 'telecom', 'text', 'photo', 'contact', 'identifiant', 'naissance', 'adresse', 'date'];
+      $('rapport').innerHTML = `<tr><th>${esc(t('rChamp'))}</th><th class="n">${esc(t('rN'))}</th></tr>` +
+        ordre.filter((c) => an.rapport[c]).map((c) => `<tr><td>${esc(t('r_' + c))}</td><td class="n">${an.rapport[c]}</td></tr>`).join('');
+      // k-anonymat
+      $('etapes').innerHTML = (kr.etapes.length ? kr.etapes.map((e) => `<li>${esc(t(e.cle, e.v))}</li>`).join('') : `<li>${esc(t('e0'))}</li>`) + `<li><b>${esc(t('kFin', kr.k || '—'))}</b></li>`;
+      const g = [...kf.groupes].sort((a, b) => a[1] - b[1] || (a[0] < b[0] ? -1 : 1));
+      $('groupes').innerHTML = `<tr><th>${esc(t('gA'))}</th><th>${esc(t('gG'))}</th><th>${esc(t('gD'))}</th><th class="n">${esc(t('gN'))}</th></tr>` +
+        g.map(([q, n]) => { const [a, ge, d] = q.split('|'); return `<tr${n < kc ? ' class="rare"' : ''}><td>${esc(a === '?' ? '—' : a)}</td><td>${esc(ge === '?' ? '—' : ge)}</td><td>${esc(d === '?' ? '—' : d)}</td><td class="n">${n}</td></tr>`; }).join('');
+    }
+    function analyserColle() {
+      let o;
+      try { o = JSON.parse($('colle').value); } catch (e) { $('msg').textContent = t('jsonErr', e.message); return; }
+      if (!o || typeof o !== 'object') { $('msg').textContent = t('jsonErr', '?'); return; }
+      if (o.resourceType !== 'Bundle') o = { resourceType: 'Bundle', type: 'collection', entry: [{ resource: o }] };
+      o.entry = (o.entry || []).filter((e) => e && e.resource && typeof e.resource === 'object');
+      src = o; nLot = 0; $('msg').textContent = t('colleOk', o.entry.length); remplirPatients(); calculer();
+    }
+    document.querySelectorAll('[data-src]').forEach((b) => b.addEventListener('click', () => choisirLot(+b.dataset.src)));
+    document.querySelectorAll('[data-inj]').forEach((b) => b.addEventListener('click', () => injecter(b.dataset.inj)));
+    $('analyser').addEventListener('click', analyserColle);
+    $('exemple').addEventListener('click', () => { $('colle').value = JSON.stringify(src, null, 2); });
+    $('cle').addEventListener('input', calculer); $('kc').addEventListener('input', calculer); $('dec').addEventListener('change', calculer);
+    $('pat').addEventListener('change', afficher);
+    remplirPatients(); calculer(); L.appliquer(L.lang);
+  })();
+  </script>
+</body>
+</html>

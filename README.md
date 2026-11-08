@@ -2,6 +2,8 @@
 
 🇫🇷 [Français](#français) · 🇬🇧 [English](#english)
 
+**Essayer la démo / Try the demo :** https://valentin-auger-laboratoire.github.io/portfolio/demos/securehealth/
+
 > Données **fictives** (noms inventés, téléphones de la plage 01 99 00 réservée à la fiction). Outil d'étude : un vrai projet de partage de données de santé passe par un DPO et une analyse d'impact (AIPD).
 
 ---
@@ -69,6 +71,7 @@ Sur un petit lot de 40 patients, atteindre k = 5 coûte cher : il faut perdre le
 ### Fichiers
 | Fichier | Contenu |
 |---|---|
+| `demo/` | démo web (copie de celle du portfolio), avec ses tests : `node demo/tests/test.js` |
 | `securehealth/validation.py` | règles de validation FHIR, chiffre de contrôle LOINC |
 | `securehealth/anonymisation.py` | pseudonymes HMAC, généralisation, décalage des dates, k-anonymat |
 | `securehealth/exemples.py` | génération du lot fictif |
