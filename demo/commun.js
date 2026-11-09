@@ -4,8 +4,8 @@
 
   function langueInitiale() {
     try {
-      return localStorage.getItem('lang') || ((navigator.language || 'fr').toLowerCase().startsWith('fr') ? 'fr' : 'en');
-    } catch (e) { return 'fr'; }
+      return (localStorage.getItem('langChoix') === 'fr' ? 'fr' : 'en');
+    } catch (e) { return 'en'; }
   }
 
   // T = { fr: {...}, en: {...} } ; les éléments portent data-t="clé" (texte) ou data-th (HTML).
@@ -18,7 +18,7 @@
       document.querySelectorAll('[data-t]').forEach((e) => { e.textContent = t(e.dataset.t); });
       document.querySelectorAll('[data-th]').forEach((e) => { e.innerHTML = t(e.dataset.th); });
       document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
-      try { localStorage.setItem('lang', lang); } catch (e) {}
+      try { localStorage.setItem('lang', lang); localStorage.setItem('langChoix', lang); } catch (e) {}
       if (surChangement) surChangement(lang);
     }
     document.querySelectorAll('[data-lang]').forEach((b) => b.addEventListener('click', () => appliquer(b.dataset.lang)));
